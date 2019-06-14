@@ -71,6 +71,8 @@ class QuranSettingsFragment : PreferenceFragmentCompat(),
       if (context is QuranPreferenceActivity) {
         context.restartActivity()
       }
+    } else if (key == Constants.PREF_USE_ARABIC_NAMES_SURA_ONLY) {
+      // somehow restart the Quran names list in the main activity or restart the whole activity
     }
   }
 

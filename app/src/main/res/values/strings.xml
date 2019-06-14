@@ -160,7 +160,9 @@
   <string name="prefs_category_translation">Translation Preferences</string>
   <string name="prefs_category_display_settings">Display Settings</string>
   <string name="prefs_use_arabic_title">Arabic mode</string>
+  <string name="prefs_use_arabic_title_sura_only">Arabic mode for sura names</string>
   <string name="prefs_use_arabic_summary_on">Use Arabic for application interface</string>
+  <string name="prefs_use_arabic_summary_on_sura_only">Use Arabic only for sura names in menu</string>
   <string name="prefs_new_background_title">New background</string>
   <string name="prefs_immersive_in_portrait_title">Fullscreen in portrait mode</string>
   <string name="prefs_immersive_in_portrait_summary_enabled">Both portrait and landscape images are displayed  in full screen</string>
@@ -263,6 +265,7 @@
   <string name="quran_ayah">Ayah %1$d</string>
   <string name="quran_ayah_details">%1$s - Ayah %2$s, Juz\' %3$s</string>
   <string name="quran_sura_title">Surat %1$s</string>
+  <string name="quran_sura_title_arabic">سورة %1$s</string>
   <string name="sura_ayah_notification_str">Sura %1$s, Ayah %2$d</string>
 
   <string name="index_loading">Loading&#8230;</string>

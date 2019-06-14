@@ -7,6 +7,7 @@ import com.crashlytics.android.Crashlytics;
 import com.quran.data.source.PageProvider;
 import com.quran.data.source.QuranDataSource;
 import com.quran.labs.androidquran.R;
+import com.quran.labs.androidquran.util.QuranSettings;
 import com.quran.labs.androidquran.util.QuranUtils;
 
 import java.util.ArrayList;
@@ -84,11 +85,18 @@ public class QuranInfo {
         sura > Constants.SURA_LAST) {
       return "";
     }
-
     StringBuilder builder = new StringBuilder();
-    String[] suraNames = context.getResources().getStringArray(R.array.sura_names);
+    QuranSettings settings = QuranSettings.getInstance(context);
+    boolean arabicSuraNames = settings.isArabicNamesSuraOnly();
+    String[] suraNames = arabicSuraNames ?
+        context.getResources().getStringArray(R.array.arabic_sura_names) :
+        context.getResources().getStringArray(R.array.sura_names);
     if (wantPrefix) {
-      builder.append(context.getString(R.string.quran_sura_title, suraNames[sura - 1]));
+      if (arabicSuraNames) {
+        builder.append(context.getString(R.string.quran_sura_title_arabic, suraNames[sura - 1]));
+      } else {
+        builder.append(context.getString(R.string.quran_sura_title, suraNames[sura - 1]));
+      }
     } else {
       builder.append(suraNames[sura - 1]);
     }

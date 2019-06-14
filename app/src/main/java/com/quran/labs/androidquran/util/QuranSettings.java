@@ -52,6 +52,10 @@ public class QuranSettings {
     return prefs.getBoolean(Constants.PREF_USE_ARABIC_NAMES, false);
   }
 
+  public boolean isArabicNamesSuraOnly() {
+    return prefs.getBoolean(Constants.PREF_USE_ARABIC_NAMES_SURA_ONLY, false);
+  }
+
   public boolean isLockOrientation() {
     return prefs.getBoolean(Constants.PREF_LOCK_ORIENTATION, false);
   }
